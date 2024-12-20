@@ -1,0 +1,10 @@
+.container {
+    background-image: url("../../../assets/img/person.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    min-height: 150vh;
+
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+}

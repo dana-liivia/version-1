@@ -1,0 +1,8 @@
+.container {
+    background-color: lightgrey;
+    min-height: 150vh;
+
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+}

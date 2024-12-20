@@ -1,0 +1,7 @@
+.container {
+    background-color: rgba(186, 186, 186);
+    color: #19170f;
+    padding: 2rem 5%;
+    min-width: 100vw;
+    min-height: 40vh;
+}

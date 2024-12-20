@@ -1,0 +1,10 @@
+.container {
+    background-image: url("../../../assets/img/royal_wallpaper.png");
+    background-repeat: repeat;
+    background-size: contain;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+}
