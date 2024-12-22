@@ -11,7 +11,7 @@ export default function Home() {
       <div>
           <Header></Header>
           <HeroSection></HeroSection>
-          <AboutMeSection></AboutMeSection>
+          {/*<AboutMeSection></AboutMeSection>*/}
           <SkillSection></SkillSection>
           <ExperiencesSection></ExperiencesSection>
           <HobbiesSection></HobbiesSection>

@@ -1,10 +1,48 @@
+
 .container {
     background-image: url("../../../assets/img/royal_wallpaper.png");
     background-repeat: repeat;
     background-size: contain;
-    min-height: 100vh;
 
+}
+
+.background {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 10%;
+    padding: 10% 10% 0 10%;
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+.description {
+    color: white;
+    margin-bottom: -3rem;
+}
+
+.title {
+    background-color: rgba(255, 255, 255, 0.79);
+    justify-content: center;
+    display: flex;
+    margin-top: 5rem;
+    padding: 3px;
+    font-weight: bolder;
+}
+
+.rows {
+    display: flex;
+    max-width: 85vw;
+    font-size: 300%;
+    color: rgba(233, 233, 237, 0.84);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.rows::-webkit-scrollbar {
+    display: none;
 }
