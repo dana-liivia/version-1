@@ -34,20 +34,41 @@ export default function ExperiencesSection() {
                         {/** Timeline Items */}
                         {[
                             {
-                                title: 'Software Engineer',
-                                date: 'ABC Corp — Jan 2020 to Dec 2023',
-                                description: 'Developed scalable web applications and led a team of developers in creating innovative solutions.',
+                                title: 'Apprenticeship KV EFZ (E-Profil)',
+                                date: 'Gemeindeverwaltung Kirchberg BE — Aug 2014 to Jul 2017',
+                                description: 'afvd',
                             },
                             {
-                                title: 'Web Developer Intern',
-                                date: 'XYZ Ltd — Jun 2019 to Dec 2019',
-                                description: 'Worked on enhancing website performance and implementing new features for client projects.',
+                                title: 'Commercial Clerk in social Services | Federal Vocational Baccalaureate',
+                                date: 'Regionaler Sozialdienst Untere Emme, Kirchberg BE | WKS Bern — Aug 2017 to Jul 2019',
+                                description: 'fsdt',
                             },
                             {
-                                title: 'Graphic Designer',
-                                date: 'Freelance — 2018 to 2019',
-                                description: 'Designed marketing materials, including logos and brochures, for small businesses.',
+                                title: 'PiBS Computer Science',
+                                date: 'SBB | BFH Bern — Aug 2019 to Jul 2020',
+                                description: 'fdgvasf',
                             },
+                            {
+                                title: 'Apprenticeship Informatics EFZ (way-up)',
+                                date: 'Swisscom (Schweiz) AG | GiBB — Aug 2020 to Jul 2022',
+                                description: 'fdgvasf',
+                            },
+                            {
+                                title: 'Software Developer (young professional)',
+                                date: 'Swisscom (Schweiz) AG — Aug 2022 to Oct 2023',
+                                description: 'fdgvasf',
+                            },
+                            {
+                                title: 'BSc Digital Business & AI',
+                                date: 'BFH Bern — Sep 2022 to TODAY',
+                                description: 'fdgvasf',
+                            },
+                            {
+                                title: 'Leader for Teams - Scrum Master',
+                                date: 'Swisscom (Schweiz) AG — Dez 2023 to TODAY',
+                                description: 'fdgvasf',
+                            },
+
                         ].map((item, index) => (
                             <div
                                 key={index}
