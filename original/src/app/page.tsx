@@ -5,6 +5,7 @@ import ExperiencesSection from "@/app/components/experiences-section";
 import HobbiesSection from "@/app/components/hobbies-section";
 import Footer from "@/app/components/footer";
 import AboutMeSection from "@/app/components/about-me-section";
+import ContactSection from "@/app/components/contact-section";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <SkillSection></SkillSection>
           <ExperiencesSection></ExperiencesSection>
           <HobbiesSection></HobbiesSection>
+          <ContactSection></ContactSection>
           {/* contact form */}
           <Footer></Footer>
       </div>
