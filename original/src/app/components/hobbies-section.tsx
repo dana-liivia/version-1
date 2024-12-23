@@ -143,29 +143,28 @@ export default function HobbiesSection() {
         <div className={style.container}>
             <div className={style.rowContainer}>
                 <div className={style.contentContainer}>
-                    <h2 className={style.title}>Nasa: Picture of the day</h2>
-                    <h2> {nasaData.title}</h2>
+                    <h2 className={style.title}>Nasa: Picture of the day - {nasaData.title}</h2>
                     <div className={style.nasaContainer}>
                         <img src={nasaData.url} alt={nasaData.title} width={300}/>
                         <p className={style.description}>{nasaData.explanation}</p>
                     </div>
                 </div>
                 <div className={style.columnContainer}>
-                    <div className={style.contentContainer}>
+                    <div className={style.weatherContainer}>
                         <h2 className={style.title}>Weather in Bern</h2>
                         <p>Temperature: {weatherDataBern.main.temp}°C</p>
                         <p>Weather: {weatherDataBern.weather[0].description}</p>
                         <p>Humidity: {weatherDataBern.main.humidity}%</p>
                         <p>Wind Speed: {weatherDataBern.wind.speed} m/s</p>
                     </div>
-                    <div className={style.contentContainer}>
+                    <div className={style.weatherContainer}>
                         <h2 className={style.title}>Weather in Zurich</h2>
                         <p>Temperature: {weatherDataZurich.main.temp}°C</p>
                         <p>Weather: {weatherDataZurich.weather[0].description}</p>
                         <p>Humidity: {weatherDataZurich.main.humidity}%</p>
                         <p>Wind Speed: {weatherDataZurich.wind.speed} m/s</p>
                     </div>
-                    <div className={style.contentContainer}>
+                    <div className={style.weatherContainer}>
                         <h2 className={style.title}>Weather in Hawaii</h2>
                         <p>Temperature: {weatherDataHonolulu.main.temp}°C</p>
                         <p>Weather: {weatherDataHonolulu.weather[0].description}</p>

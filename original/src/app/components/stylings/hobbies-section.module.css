@@ -1,9 +1,10 @@
 .container {
-    background-color: lightgrey;
-    min-height: 150vh;
+    background-color: white;
+    min-height: 100vh;
     display: flex;
     padding: 8% 5%;
     flex-direction: column;
+    color: white;
 }
 
 .title {
@@ -12,14 +13,22 @@
 
 .contentContainer {
     min-width: 40vw;
-    background-color: rgba(34, 29, 27, 0.54);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     margin: 0 1rem 1rem 0;
 }
 
+.weatherContainer {
+    min-width: 40vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    margin: 0 1rem 1rem 0;
+    height: 22vh;
+}
+
 .cContainer {
     min-width: 29vw;
-    background-color: rgba(34, 29, 27, 0.54);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     margin: 0 1rem 1rem 0;
 }
@@ -32,6 +41,7 @@
 .nasaContainer {
     display: flex;
     flex-direction: row;
+    height: 62vh;
 }
 
 .columnContainer {

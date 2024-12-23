@@ -22,7 +22,8 @@
 .timelineTitle {
     text-align: center;
     color: white;
-    margin-bottom: 5rem;
+    font-size: 24px;
+    margin-bottom: 3rem;
 }
 
 /* Timeline Structure */
