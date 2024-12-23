@@ -1,3 +1,4 @@
+"use client"
 import style from "./stylings/about-me-section.module.css";
 
 export default function AboutMeSection() {

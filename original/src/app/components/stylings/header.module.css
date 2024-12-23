@@ -10,7 +10,23 @@
     align-items: center;
     img {
         max-height: 3rem;
-        margin-right: 1rem;
+        margin-right: 2rem;
     }
 }
 
+.sectionName {
+    padding: 0 2rem;
+    cursor: pointer; /* Indicate clickability */
+}
+
+.active {
+    font-weight: bold;
+}
+
+.button {
+    background-color: transparent;
+}
+
+.button:hover {
+    background-color: white;
+}

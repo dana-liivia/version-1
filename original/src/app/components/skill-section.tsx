@@ -20,6 +20,7 @@ import {
     SiNodedotjs, SiBootstrap, SiRubyonrails, SiR, SiDbeaver
 } from 'react-icons/si';
 import {FaJava, FaReact, FaSass} from "react-icons/fa";
+import React from "react";
 
 
 export default function SkillSection() {
@@ -132,6 +133,7 @@ export default function SkillSection() {
     return (
         <div className={style.container}>
             <div className={style.background}>
+                <h2 className={style.timelineTitle}>my skillset</h2>>
                 <h2 className={style.description}>I have a diverse set of skills and enjoy working with various tools to
                     bring projects to life in a creative and efficient way.</h2>
                 <h2 className={style.title}>Skills Know-How</h2>

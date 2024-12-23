@@ -141,6 +141,7 @@ export default function HobbiesSection() {
 
     return (
         <div className={style.container}>
+            <h2 className={style.timelineTitle}>nice things to know</h2>
             <div className={style.rowContainer}>
                 <div className={style.contentContainer}>
                     <h2 className={style.title}>Nasa: Picture of the day - {nasaData.title}</h2>

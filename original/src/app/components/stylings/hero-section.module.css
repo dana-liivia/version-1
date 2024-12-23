@@ -2,7 +2,7 @@
     background-image: url("../../../assets/img/person.png");
     background-repeat: no-repeat;
     background-position-x: right;
-    min-height: 150vh;
+    min-height: 140vh;
 
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@
 .description {
     max-width: 55%;
     background-color: rgba(34, 29, 27, 0.54);
-    margin: 15rem -1rem 2rem 0;
+    margin: 7rem -1rem 0 0;
     color: white;
     padding: 1rem;
 }

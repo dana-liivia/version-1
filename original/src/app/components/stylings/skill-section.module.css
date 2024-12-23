@@ -18,6 +18,13 @@
     margin-bottom: -3rem;
 }
 
+.timelineTitle {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 3rem;
+}
+
 .title {
     background-color: rgba(255, 255, 255, 0.79);
     justify-content: center;
