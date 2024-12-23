@@ -10,7 +10,6 @@ export default function Header() {
         window.innerWidth < 769 ? setIsDisplayed(false) : setIsDisplayed(true);
     }, []);
 
-
     useEffect(() => {
         const sections = document.querySelectorAll("section");
 
