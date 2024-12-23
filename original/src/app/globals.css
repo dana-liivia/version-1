@@ -18,9 +18,24 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Courier New", serif;
-  font-size: 16px;
+  font-size: 16px
 }
 
 html {
   scroll-behavior: smooth;
 }
+
+/* Tablets oder Ähnliches */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Smartphones oder Ähnliches */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+

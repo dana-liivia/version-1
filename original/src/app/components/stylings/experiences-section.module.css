@@ -94,7 +94,13 @@
     box-shadow: #b39878; /* Highlight color when active */
 }
 
-/* Responsive Design */
+/* Responsive Design für Tablets oder Ähnliches */
+@media (max-width: 1024px) {
+
+
+}
+
+/* Responsive Design für Tablets oder Ähnliches */
 @media (max-width: 768px) {
     .timeline {
         border-left: none;
@@ -114,4 +120,9 @@
         margin-top: 20px;
         text-align: center;
     }
+}
+
+/* Responsive Design für Smartphones oder Ähnliches */
+@media (max-width: 480px) {
+
 }

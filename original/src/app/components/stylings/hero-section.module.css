@@ -2,7 +2,7 @@
     background-image: url("../../../assets/img/person.png");
     background-repeat: no-repeat;
     background-position-x: right;
-    min-height: 140vh;
+    min-height: 120vh;
 
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@
 .description {
     max-width: 55%;
     background-color: rgba(34, 29, 27, 0.54);
-    margin: 7rem -1rem 0 0;
+    margin: 7rem -1rem 1rem 0;
     color: white;
     padding: 1rem;
 }
@@ -37,5 +37,71 @@
 @keyframes blink {
     50% {
         border-color: transparent
+    }
+}
+
+/* Laptops oder Ähnliches */
+@media (max-width: 1024px) {
+    .description {
+        max-width: 100%;
+        background-color: rgba(34, 29, 27, 0.54);
+        margin: 5rem -1rem 1rem 0;
+        color: white;
+        padding: 1rem;
+    }
+
+    .container {
+        background-image: url("../../../assets/img/person.png");
+        background-repeat: no-repeat;
+        background-position-x: right;
+        min-height: 120vh;
+
+        display: flex;
+        flex-direction: column;
+        padding: 15% 2% 0 2%;
+    }
+}
+
+/* Tablets oder Ähnliches */
+@media (max-width: 768px) {
+    .description {
+        max-width: 100%;
+        background-color: rgba(34, 29, 27, 0.54);
+        margin: 5rem -1rem 1rem 0;
+        color: white;
+        padding: 1rem;
+    }
+
+    .container {
+        background-image: url("../../../assets/img/person.png");
+        background-repeat: no-repeat;
+        background-position-x: right;
+        min-height: 120vh;
+
+        display: flex;
+        flex-direction: column;
+        padding: 15% 2% 0 2%;
+    }
+}
+
+/* Smartphones oder Ähnliches */
+@media (max-width: 480px) {
+    .description {
+        max-width: 100%;
+        background-color: rgba(34, 29, 27, 0.54);
+        margin: 1rem -1rem 1rem 0;
+        color: white;
+        padding: 1rem;
+    }
+
+    .container {
+        background-image: url("../../../assets/img/person.png");
+        background-repeat: no-repeat;
+        background-position-x: right;
+        min-height: 120vh;
+
+        display: flex;
+        flex-direction: column;
+        padding: 15% 2% 0 2%;
     }
 }

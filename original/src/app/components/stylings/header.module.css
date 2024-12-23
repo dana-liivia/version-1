@@ -30,3 +30,24 @@
 .button:hover {
     background-color: white;
 }
+
+
+
+/* Responsive Design */
+/* Laptops oder Ähnliches */
+@media (max-width: 1024px) {
+
+
+}
+
+/* Tablets oder Ähnliches */
+@media (max-width: 768px) {
+
+
+
+}
+
+/* Smartphones oder Ähnliches */
+@media (max-width: 480px) {
+
+}
