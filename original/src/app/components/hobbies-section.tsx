@@ -82,6 +82,7 @@ export default function HobbiesSection() {
                 console.error('Error fetching facts:', error);
             }
         }
+
         fetchFact();
     }, []);
 
@@ -140,55 +141,72 @@ export default function HobbiesSection() {
     }
 
     return (
+        <div className={style.backgroundFull}>
         <div className={style.container}>
             <h2 className={style.timelineTitle}>nice things to know</h2>
             <div className={style.rowContainer}>
-                <div className={style.contentContainer}>
-                    <h2 className={style.title}>Nasa: Picture of the day - {nasaData.title}</h2>
-                    <div className={style.nasaContainer}>
-                        <img src={nasaData.url} alt={nasaData.title} width={300}/>
-                        <p className={style.description}>{nasaData.explanation}</p>
+                <div className={style.background}>
+                    <div className={style.contentContainer}>
+                        <h2 className={style.title}>Nasa: Picture of the day - {nasaData.title}</h2>
+                        <div className={style.nasaContainer}>
+                            <img src={nasaData.url} alt={nasaData.title} width={300}/>
+                            <p className={style.description}>{nasaData.explanation}</p>
+                        </div>
                     </div>
                 </div>
+
                 <div className={style.columnContainer}>
-                    <div className={style.weatherContainer}>
-                        <h2 className={style.title}>Weather in Bern</h2>
-                        <p>Temperature: {weatherDataBern.main.temp}°C</p>
-                        <p>Weather: {weatherDataBern.weather[0].description}</p>
-                        <p>Humidity: {weatherDataBern.main.humidity}%</p>
-                        <p>Wind Speed: {weatherDataBern.wind.speed} m/s</p>
+                    <div className={style.background}>
+                        <div className={style.weatherContainer}>
+                            <h2 className={style.title}>Weather in Bern</h2>
+                            <p>Temperature: {weatherDataBern.main.temp}°C</p>
+                            <p>Weather: {weatherDataBern.weather[0].description}</p>
+                            <p>Humidity: {weatherDataBern.main.humidity}%</p>
+                            <p>Wind Speed: {weatherDataBern.wind.speed} m/s</p>
+                        </div>
                     </div>
-                    <div className={style.weatherContainer}>
-                        <h2 className={style.title}>Weather in Zurich</h2>
-                        <p>Temperature: {weatherDataZurich.main.temp}°C</p>
-                        <p>Weather: {weatherDataZurich.weather[0].description}</p>
-                        <p>Humidity: {weatherDataZurich.main.humidity}%</p>
-                        <p>Wind Speed: {weatherDataZurich.wind.speed} m/s</p>
+                    <div className={style.background}>
+                        <div className={style.weatherContainer}>
+                            <h2 className={style.title}>Weather in Zurich</h2>
+                            <p>Temperature: {weatherDataZurich.main.temp}°C</p>
+                            <p>Weather: {weatherDataZurich.weather[0].description}</p>
+                            <p>Humidity: {weatherDataZurich.main.humidity}%</p>
+                            <p>Wind Speed: {weatherDataZurich.wind.speed} m/s</p>
+                        </div>
                     </div>
-                    <div className={style.weatherContainer}>
-                        <h2 className={style.title}>Weather in Hawaii</h2>
-                        <p>Temperature: {weatherDataHonolulu.main.temp}°C</p>
-                        <p>Weather: {weatherDataHonolulu.weather[0].description}</p>
-                        <p>Humidity: {weatherDataHonolulu.main.humidity}%</p>
-                        <p>Wind Speed: {weatherDataHonolulu.wind.speed} m/s</p>
+                    <div className={style.background}>
+                        <div className={style.weatherContainer}>
+                            <h2 className={style.title}>Weather in Hawaii</h2>
+                            <p>Temperature: {weatherDataHonolulu.main.temp}°C</p>
+                            <p>Weather: {weatherDataHonolulu.weather[0].description}</p>
+                            <p>Humidity: {weatherDataHonolulu.main.humidity}%</p>
+                            <p>Wind Speed: {weatherDataHonolulu.wind.speed} m/s</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div className={style.rowContainer}>
-                <div className={style.cContainer}>
-                    <h2 className={style.title}>Did you know that ...</h2>
-                    <p>{fact}</p>
+                <div className={style.background}>
+                    <div className={style.cContainer}>
+                        <h2 className={style.title}>Did you know that ...</h2>
+                        <p>{fact}</p>
+                    </div>
                 </div>
-                <div className={style.cContainer}>
-                    <h2 className={style.title}>Funny funny</h2>
-                    <p>{joke}</p>
+                <div className={style.background}>
+                    <div className={style.cContainer}>
+                        <h2 className={style.title}>Funny funny</h2>
+                        <p>{joke}</p>
+                    </div>
                 </div>
-                <div className={style.cContainer}>
-                    <h2 className={style.title}>Who said what?</h2>
-                    <p>{author} did once say: <span className={"italic"}>{quote}</span>
-                    </p>
+                <div className={style.background}>
+                    <div className={style.cContainer}>
+                        <h2 className={style.title}>Who said what?</h2>
+                        <p>{author} did once say: <span className={"italic"}>{quote}</span>
+                        </p>
+                    </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

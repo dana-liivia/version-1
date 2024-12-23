@@ -1,5 +1,13 @@
+.backgroundFull {
+    background-image: url("../../../assets/img/person.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
+    min-height: 110vh;
+}
+
 .container {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.28);
     min-height: 100vh;
     display: flex;
     padding: 5%;
@@ -20,14 +28,14 @@
 
 .contentContainer {
     min-width: 40vw;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #221d1b8a;
     padding: 1rem;
     margin: 0 1rem 1rem 0;
 }
 
 .weatherContainer {
     min-width: 40vw;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #221d1b8a;
     padding: 1rem;
     margin: 0 1rem 1rem 0;
     height: 22vh;
@@ -35,7 +43,7 @@
 
 .cContainer {
     min-width: 29vw;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #221d1b8a;
     padding: 1rem;
     margin: 0 1rem 1rem 0;
 }
@@ -48,7 +56,7 @@
 .nasaContainer {
     display: flex;
     flex-direction: row;
-    height: 62vh;
+    min-height: 62vh;
 }
 
 .columnContainer {
@@ -57,32 +65,173 @@
 }
 
 .description {
-    font-size: 15px;
     padding-left: 1rem;
 }
 
-.background {
-    background-image: url("../../../assets/img/royal_wallpaper.png");
-    background-repeat: repeat;
-    background-size: contain;
+/* Responsive Design für Laptops oder Ähnliches */
+@media (max-width: 1497px) {
+    .timelineTitle {
+        text-align: center;
+        color: black;
+        font-size: 24px;
+        margin-bottom: 3rem;
+    }
+
+    .backgroundFull {
+        background-image: url("../../../assets/img/person.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: right;
+        min-height: 110vh;
+    }
+
+    .container {
+        background-color: rgba(255, 255, 255, 0.28);
+        min-height: 110vh;
+        min-width: 100vw;
+        display: flex;
+        padding: 5% 5% 0 5%;
+        flex-direction: column;
+        color: white;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rowContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contentContainer {
+        min-width: 80vw;
+        padding: 0.5rem;
+        margin: 0 0.5rem 1rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: #221d1b8a;
+    }
+
+    .weatherContainer {
+        min-width: 30vw;
+        padding: 0.5rem;
+        margin: 0 0.5rem 1rem 0.5rem;
+        justify-content: center;
+        text-align: center;
+        background-color: #221d1b8a;
+    }
+
+    .cContainer {
+        min-width: 93vw;
+        padding: 1rem;
+        margin: 0 0.5rem 1rem 0.5rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #221d1b8a;
+    }
+
+    .nasaContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .columnContainer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .description {
+        font-size: 12px;
+        padding-left: 1rem;
+    }
 }
 
-
-/* Responsive Design */
-/* Laptops oder Ähnliches */
-@media (max-width: 1024px) {
-
-
-}
-
-/* Tablets oder Ähnliches */
+/* Responsive Design für Smartphones oder Ähnliches */
+/* Responsive Design für Tablets oder Ähnliches */
 @media (max-width: 768px) {
+    .timelineTitle {
+        text-align: center;
+        color: black;
+        font-size: 18px;
+        margin-bottom: 3rem;
+    }
 
+    .backgroundFull {
+        background-image: url("../../../assets/img/person.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: right;
+        min-height: 110vh;
+    }
 
+    .container {
+        background-color: rgba(255, 255, 255, 0.28);
+        min-height: 110vh;
+        min-width: 100vw;
+        display: flex;
+        padding: 5% 5% 0 5%;
+        flex-direction: column;
+        color: white;
+        justify-content: center;
+        align-items: center;
+    }
 
-}
+    .rowContainer {
+        display: flex;
+        flex-direction: column;
+    }
 
-/* Smartphones oder Ähnliches */
-@media (max-width: 480px) {
+    .contentContainer {
+        min-width: 80vw;
+        padding: 0.5rem;
+        margin: 0 0.5rem 1rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: #221d1b8a;
+    }
+
+    .weatherContainer {
+        min-width: 30vw;
+        padding: 0.5rem;
+        margin: 0 0.5rem 1rem 0.5rem;
+        justify-content: center;
+        text-align: center;
+        background-color: #221d1b8a;
+    }
+
+    .cContainer {
+        min-width: 93vw;
+        padding: 1rem;
+        margin: 0 0.5rem 1rem 0.5rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #221d1b8a;
+    }
+
+    .nasaContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .columnContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .description {
+        font-size: 12px;
+        padding-left: 1rem;
+    }
 
 }
