@@ -8,7 +8,9 @@ interface FactResponse {
 
 export default function HobbiesSection() {
     const [nasaData, setNasaData] = useState(null);
-    const [weatherData, setWeatherData] = useState(null); // Added state for weather data
+    const [weatherDataBern, setWeatherDataBern] = useState(null); // Added state for weather data
+    const [weatherDataZurich, setWeatherDataZurich] = useState(null); // Added state for weather data
+    const [weatherDataHonolulu, setWeatherDataHonolulu] = useState(null); // Added state for weather data
     const [fact, setFact] = useState('');
     const [joke, setJoke] = useState('');
     const [quote, setQuote] = useState('');
@@ -31,8 +33,7 @@ export default function HobbiesSection() {
         fetchNASAImage();
     }, []); // Leeres Array sorgt dafür, dass die API nur einmal aufgerufen wird
 
-
-    // Weather Request for Bern
+    // Weather Requests
     useEffect(() => {
         async function fetchWeather() {
             const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY; // Replace with your own API key
@@ -41,12 +42,17 @@ export default function HobbiesSection() {
                 const city1 = 'Bern';
                 const response_bern = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city1}&appid=${apiKey}&units=metric`);
                 const bern_data = await response_bern.json();
-                setWeatherData(bern_data);
+                setWeatherDataBern(bern_data);
 
                 const city2 = 'Zurich';
                 const response_zurich = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city2}&appid=${apiKey}&units=metric`);
                 const zurich_data = await response_zurich.json();
-                setWeatherData(zurich_data);
+                setWeatherDataZurich(zurich_data);
+
+                const city3 = 'Honolulu';
+                const response_honolulu = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city3}&appid=${apiKey}&units=metric`);
+                const honolulu_data = await response_honolulu.json();
+                setWeatherDataHonolulu(honolulu_data);
             } catch (error) {
                 console.error('Error fetching weather data:', error);
             }
@@ -76,10 +82,8 @@ export default function HobbiesSection() {
                 console.error('Error fetching facts:', error);
             }
         }
-
         fetchFact();
     }, []);
-
 
     // Jokes API-Request
     useEffect(() => {
@@ -131,7 +135,7 @@ export default function HobbiesSection() {
     }, []);
 
 
-    if (!nasaData || !weatherData || !fact) {
+    if (!nasaData || !weatherDataBern || !weatherDataZurich || !weatherDataHonolulu || !fact) {
         return <p>Loading...</p>; // Ladeanzeige während des API-Aufrufs
     }
 
@@ -149,17 +153,24 @@ export default function HobbiesSection() {
                 <div className={style.columnContainer}>
                     <div className={style.contentContainer}>
                         <h2 className={style.title}>Weather in Bern</h2>
-                        <p>Temperature: {weatherData.main.temp}°C</p>
-                        <p>Weather: {weatherData.weather[0].description}</p>
-                        <p>Humidity: {weatherData.main.humidity}%</p>
-                        <p>Wind Speed: {weatherData.wind.speed} m/s</p>
+                        <p>Temperature: {weatherDataBern.main.temp}°C</p>
+                        <p>Weather: {weatherDataBern.weather[0].description}</p>
+                        <p>Humidity: {weatherDataBern.main.humidity}%</p>
+                        <p>Wind Speed: {weatherDataBern.wind.speed} m/s</p>
                     </div>
                     <div className={style.contentContainer}>
                         <h2 className={style.title}>Weather in Zurich</h2>
-                        <p>Temperature: {weatherData.main.temp}°C</p>
-                        <p>Weather: {weatherData.weather[0].description}</p>
-                        <p>Humidity: {weatherData.main.humidity}%</p>
-                        <p>Wind Speed: {weatherData.wind.speed} m/s</p>
+                        <p>Temperature: {weatherDataZurich.main.temp}°C</p>
+                        <p>Weather: {weatherDataZurich.weather[0].description}</p>
+                        <p>Humidity: {weatherDataZurich.main.humidity}%</p>
+                        <p>Wind Speed: {weatherDataZurich.wind.speed} m/s</p>
+                    </div>
+                    <div className={style.contentContainer}>
+                        <h2 className={style.title}>Weather in Hawaii</h2>
+                        <p>Temperature: {weatherDataHonolulu.main.temp}°C</p>
+                        <p>Weather: {weatherDataHonolulu.weather[0].description}</p>
+                        <p>Humidity: {weatherDataHonolulu.main.humidity}%</p>
+                        <p>Wind Speed: {weatherDataHonolulu.wind.speed} m/s</p>
                     </div>
                 </div>
             </div>
@@ -169,7 +180,7 @@ export default function HobbiesSection() {
                     <p>{fact}</p>
                 </div>
                 <div className={style.cContainer}>
-                    <h2 className={style.title}>Funny bunny</h2>
+                    <h2 className={style.title}>Funny funny</h2>
                     <p>{joke}</p>
                 </div>
                 <div className={style.cContainer}>
@@ -179,5 +190,5 @@ export default function HobbiesSection() {
                 </div>
             </div>
         </div>
-    );
+    )
 }
