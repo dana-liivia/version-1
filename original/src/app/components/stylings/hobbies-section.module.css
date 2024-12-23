@@ -3,12 +3,21 @@
     min-height: 150vh;
 
     display: flex;
-    flex-direction: column;
-    padding: 10%;
+    flex-direction: row;
+    padding: 8% 5%;
+}
+
+.title {
+    font-weight: bolder;
 }
 
 .nasaContainer {
-    width: 35vw;
-    background-color: rgba(69, 60, 48, 0.46);
+    width: 37vw;
+    background-color: rgba(34, 29, 27, 0.54);
     padding: 1rem;
+    margin: 0 1rem 0 0;
+}
+
+.description {
+    font-size: 10px;
 }

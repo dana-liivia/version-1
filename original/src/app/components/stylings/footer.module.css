@@ -1,7 +1,20 @@
 .container {
-    background-color: rgba(186, 186, 186);
+    background-color: rgba(34, 29, 27, 0.54);
     color: #19170f;
     padding: 2rem 5%;
     min-width: 100vw;
-    min-height: 40vh;
+    min-height: 50vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logoContainer {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
 }
