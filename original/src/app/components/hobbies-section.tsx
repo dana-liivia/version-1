@@ -10,6 +10,9 @@ export default function HobbiesSection() {
     const [nasaData, setNasaData] = useState(null);
     const [weatherData, setWeatherData] = useState(null); // Added state for weather data
     const [fact, setFact] = useState('');
+    const [joke, setJoke] = useState('');
+    const [quote, setQuote] = useState('');
+    const [author, setAuthor] = useState('');
 
     // NASA Request
     useEffect(() => {
@@ -24,6 +27,7 @@ export default function HobbiesSection() {
                 console.error('Fehler beim Abrufen des NASA-Bilds:', error);
             }
         }
+
         fetchNASAImage();
     }, []); // Leeres Array sorgt dafür, dass die API nur einmal aufgerufen wird
 
@@ -47,11 +51,12 @@ export default function HobbiesSection() {
                 console.error('Error fetching weather data:', error);
             }
         }
+
         fetchWeather();
     }, []);
 
 
-    // Facts API Request
+    // Facts API-Request
     useEffect(() => {
         async function fetchFact() {
             const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY; // Replace with your own API key
@@ -71,7 +76,58 @@ export default function HobbiesSection() {
                 console.error('Error fetching facts:', error);
             }
         }
+
         fetchFact();
+    }, []);
+
+
+    // Jokes API-Request
+    useEffect(() => {
+        async function fetchJoke() {
+            const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY; // Replace with your own API key
+
+            try {
+                const response = await fetch('https://api.api-ninjas.com/v1/jokes', {
+                    method: 'GET',
+                    headers: {
+                        'X-Api-Key': apiKey, // Use environment variable for security
+                    },
+                });
+
+                if (!response.ok) throw new Error('Failed to fetch joke');
+                const data: { joke: string } = await response.json();
+                setJoke(data[0].joke);
+            } catch (error) {
+                console.error('Error fetching facts:', error);
+            }
+        }
+
+        fetchJoke();
+    }, []);
+
+    // Quotes API-Request
+    useEffect(() => {
+        async function fetchQuote() {
+            const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY; // Replace with your own API key
+
+            try {
+                const response = await fetch('https://api.api-ninjas.com/v1/quotes', {
+                    method: 'GET',
+                    headers: {
+                        'X-Api-Key': apiKey, // Use environment variable for security
+                    },
+                });
+
+                if (!response.ok) throw new Error('Failed to fetch quote');
+                const data: { quote: string } = await response.json();
+                setQuote(data[0].quote);
+                setAuthor(data[0].author);
+            } catch (error) {
+                console.error('Error fetching facts:', error);
+            }
+        }
+
+        fetchQuote();
     }, []);
 
 
@@ -81,28 +137,46 @@ export default function HobbiesSection() {
 
     return (
         <div className={style.container}>
-            <div className={style.nasaContainer}>
-                <h2 className={style.title}>Nasa: Picture of the day</h2>
-                <h2> {nasaData.title}</h2>
-                <img src={nasaData.url} alt={nasaData.title}/>
-                <p className={style.description}>{nasaData.explanation}</p>
+            <div className={style.rowContainer}>
+                <div className={style.contentContainer}>
+                    <h2 className={style.title}>Nasa: Picture of the day</h2>
+                    <h2> {nasaData.title}</h2>
+                    <div className={style.nasaContainer}>
+                        <img src={nasaData.url} alt={nasaData.title} width={300}/>
+                        <p className={style.description}>{nasaData.explanation}</p>
+                    </div>
+                </div>
+                <div className={style.columnContainer}>
+                    <div className={style.contentContainer}>
+                        <h2 className={style.title}>Weather in Bern</h2>
+                        <p>Temperature: {weatherData.main.temp}°C</p>
+                        <p>Weather: {weatherData.weather[0].description}</p>
+                        <p>Humidity: {weatherData.main.humidity}%</p>
+                        <p>Wind Speed: {weatherData.wind.speed} m/s</p>
+                    </div>
+                    <div className={style.contentContainer}>
+                        <h2 className={style.title}>Weather in Zurich</h2>
+                        <p>Temperature: {weatherData.main.temp}°C</p>
+                        <p>Weather: {weatherData.weather[0].description}</p>
+                        <p>Humidity: {weatherData.main.humidity}%</p>
+                        <p>Wind Speed: {weatherData.wind.speed} m/s</p>
+                    </div>
+                </div>
             </div>
-            <div className={style.nasaContainer}>
-                <h2 className={style.title}>Weather in Bern</h2>
-                <p>Temperature: {weatherData.main.temp}°C</p>
-                <p>Weather: {weatherData.weather[0].description}</p>
-                <p>Humidity: {weatherData.main.humidity}%</p>
-                <p>Wind Speed: {weatherData.wind.speed} m/s</p>
-
-                <h2 className={style.title}>Weather in Zurich</h2>
-                <p>Temperature: {weatherData.main.temp}°C</p>
-                <p>Weather: {weatherData.weather[0].description}</p>
-                <p>Humidity: {weatherData.main.humidity}%</p>
-                <p>Wind Speed: {weatherData.wind.speed} m/s</p>
-            </div>
-            <div className={style.nasaContainer}>
-                <h2 className={style.title}>Leave the page wiser than you opened it</h2>
-                <p className={style.description}>{fact}</p>
+            <div className={style.rowContainer}>
+                <div className={style.cContainer}>
+                    <h2 className={style.title}>Did you know that ...</h2>
+                    <p>{fact}</p>
+                </div>
+                <div className={style.cContainer}>
+                    <h2 className={style.title}>Funny bunny</h2>
+                    <p>{joke}</p>
+                </div>
+                <div className={style.cContainer}>
+                    <h2 className={style.title}>Who said what?</h2>
+                    <p>{author} did once say: <span className={"italic"}>{quote}</span>
+                    </p>
+                </div>
             </div>
         </div>
     );

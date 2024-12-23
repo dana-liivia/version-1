@@ -16,7 +16,7 @@ export default function Home() {
           <SkillSection></SkillSection>
           <ExperiencesSection></ExperiencesSection>
           <HobbiesSection></HobbiesSection>
-          <ContactSection></ContactSection>
+          {/*<ContactSection></ContactSection>*/}
           {/* contact form */}
           <Footer></Footer>
       </div>
