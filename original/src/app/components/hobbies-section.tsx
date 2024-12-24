@@ -15,7 +15,7 @@ export default function HobbiesSection() {
     // NASA Request
     useEffect(() => {
         async function fetchNASAImage() {
-            const apiKey = process.env.NASA_API_KEY;
+            const apiKey = process.env.NEXT_PUBLIC_NASA_API_KEY;
             try {
                 const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`);
                 const data = await response.json();
@@ -31,7 +31,7 @@ export default function HobbiesSection() {
     // Weather Requests
     useEffect(() => {
         async function fetchWeather() {
-            const apiKey = process.env.WEATHER_API_KEY; // Replace with your own API key
+            const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY; // Replace with your own API key
 
             try {
                 const city1 = 'Bern';
@@ -59,7 +59,7 @@ export default function HobbiesSection() {
     useEffect(() => {
         async function fetchFact() {
             try {
-                const apiKey = process.env.FACTS_API_KEY ?? "";// Default to an empty string if undefined
+                const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY ?? "";// Default to an empty string if undefined
 
                 if (!apiKey) {
                     console.error("API key is missing!");
@@ -88,7 +88,7 @@ export default function HobbiesSection() {
     useEffect(() => {
         async function fetchJoke() {
             try {
-                const apiKey = process.env.FACTS_API_KEY ?? ""; // Default to an empty string if undefined
+                const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY ?? ""; // Default to an empty string if undefined
 
                 if (!apiKey) {
                     console.error("API key is missing!");
@@ -117,7 +117,7 @@ export default function HobbiesSection() {
     useEffect(() => {
         async function fetchQuote() {
             try {
-                const apiKey = process.env.FACTS_API_KEY ?? "";// Default to an empty string if undefined
+                const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY ?? "";// Default to an empty string if undefined
 
                 if (!apiKey) {
                     console.error("API key is missing!");
