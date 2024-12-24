@@ -24,7 +24,6 @@ export default function HobbiesSection() {
                 console.error('Fehler beim Abrufen des NASA-Bilds:', error);
             }
         }
-
         fetchNASAImage();
     }, []); // Leeres Array sorgt dafür, dass die API nur einmal aufgerufen wird
 
