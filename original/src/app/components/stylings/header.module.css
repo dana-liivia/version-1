@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    img {
+    .img {
         max-height: 3rem;
         margin-right: 2rem;
     }

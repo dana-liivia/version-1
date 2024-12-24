@@ -35,7 +35,7 @@ export default function Header() {
             {isDisplayed ? (
                 // normal navbar
                 <div className={style.container}>
-                    <img src={"logo.png"} alt="logo"/>
+                    <img className={style.img} src={"logo.png"} alt="logo"/>
                     <a href="#about-me"
                        className={`${style.button} ${activeSection == "about-me" ? style.active : ""}`}>
                         <p className={style.sectionName}>about me</p>
