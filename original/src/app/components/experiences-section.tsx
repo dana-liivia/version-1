@@ -6,7 +6,6 @@ import style from "@/app/components/stylings/experiences-section.module.css";
 export default function ExperiencesSection() {
     const [activeIndex, setActiveIndex] = useState(0);
     const [showMore, setShowMore] = useState(false);
-    const [isDisplayed, setIsDisplayed] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -30,14 +29,6 @@ export default function ExperiencesSection() {
     const handleToggle = () => {
         setShowMore((prev) => !prev);
     };
-
-    useEffect(() => {
-        if (window.innerWidth < 769) {
-            setIsDisplayed(false);
-        } else {
-            setIsDisplayed(true);
-        }
-    }, []);
 
     return (
         <div className={style.container}>
