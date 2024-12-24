@@ -5,7 +5,7 @@ export default function HeroSection() {
     return (
         <div className={style.container}>
             <h1 className={style.typingEffect1}>hello world. </h1>
-            <h2 id={"title"} className={"text-lg font-medium"}>Happy to meet you & welcome to my slice of the www.</h2>
+            <h2 id={"title"} className={style.secondTitle}>Happy to meet you & welcome to my slice of the www.</h2>
 
             <div className={style.description}>
                 <br/>

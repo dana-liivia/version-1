@@ -19,7 +19,10 @@
     font-size: 2em;
     margin: 5rem 0 2rem 0;
 }
-
+.secondTitle {
+    font-size: 1.5rem;
+    margin:-2rem 0 0 12rem;
+}
 .description {
     max-width: 55%;
     background-color: rgba(34, 29, 27, 0.54);

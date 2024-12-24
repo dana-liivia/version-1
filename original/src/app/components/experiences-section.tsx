@@ -5,6 +5,8 @@ import style from "@/app/components/stylings/experiences-section.module.css";
 
 export default function ExperiencesSection() {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [showMore, setShowMore] = useState(false);
+    const [isDisplayed, setIsDisplayed] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -25,66 +27,95 @@ export default function ExperiencesSection() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const handleToggle = () => {
+        setShowMore((prev) => !prev);
+    };
+
+    useEffect(() => {
+        if (window.innerWidth < 769) {
+            setIsDisplayed(false);
+        } else {
+            setIsDisplayed(true);
+        }
+    }, []);
+
     return (
         <div className={style.container}>
             <div className={style.background}>
                 <div className={style.timelineContainer}>
                     <div className={style.titleContainer}>
-                    <h2 className={style.timelineTitle}>my professional and educational experiences</h2>
+                    <h2 className={style.timelineTitle}>my experiences</h2>
                     </div>
                     <div className={style.timeline}>
                         {/** Timeline Items */}
                         {[
                             {
                                 title: 'Apprenticeship KV EFZ (E-Profil)',
-                                date: 'Gemeindeverwaltung Kirchberg BE — Aug 2014 to Jul 2017',
-                                description: 'afvd',
+                                start: '2014 - 2017',
+                                date: 'Gemeindeverwaltung Kirchberg BE',
+                                description: 'As a commercial clerk in public administration, ' +
+                                    'I developed strong customer service skills, ' +
+                                    'both in person and over the phone. ' +
+                                    'I gained valuable insights and actively performed administrative ' +
+                                    'tasks in various public administration sectors, including resident ' +
+                                    'and foreigner registration, finance, the AHV office, ' +
+                                    'and the regional social services department. ' +
+                                    'My work in social services, in particular, taught me how ' +
+                                    'to effectively interact with a diverse range of clients, ' +
+                                    'understand their individual needs, and respond appropriately to each situation.',
                             },
                             {
-                                title: 'Commercial Clerk in social Services | Federal Vocational Baccalaureate',
-                                date: 'Regionaler Sozialdienst Untere Emme, Kirchberg BE | WKS Bern — Aug 2017 to Jul 2019',
-                                description: 'fsdt',
+                                title: 'Commercial Clerk in Social Services | Federal Vocational Baccalaureate',
+                                start: '2017 - 2019',
+                                date: 'Regionaler Sozialdienst Untere Emme, Kirchberg BE',
+                                description: 'As a commercial clerk in public administration, I developed strong customer service skills, both in person and over the phone. I gained valuable insights and actively performed administrative tasks in various public administration sectors, including resident and foreigner registration, finance, the AHV office, and the regional social services department. My work in social services, in particular, taught me how to effectively interact with a diverse range of clients, understand their individual needs, and respond appropriately to each situation.',
                             },
                             {
                                 title: 'PiBS Computer Science',
-                                date: 'SBB | BFH Bern — Aug 2019 to Jul 2020',
-                                description: 'fdgvasf',
+                                start: '2019 - 2020',
+                                date: 'SBB | BFH Bern',
+                                description: 'The bachelor\'s degree program includes a diverse range of informatics modules, along with foundational mathematics, communication skills, and hands-on projects. During my time at SBB, I contributed to the development of a practical project, collaborating with a dynamic team of young professionals.',
                             },
                             {
                                 title: 'Apprenticeship Informatics EFZ (way-up)',
-                                date: 'Swisscom (Schweiz) AG | GiBB — Aug 2020 to Jul 2022',
-                                description: 'fdgvasf',
+                                start: '2020 - 2022',
+                                date: 'Swisscom (Schweiz) AG',
+                                description: 'During my apprenticeship, I had among other things the opportunity to work on a project focused on data visualization. I am skilled at creating dashboards with tools like Tableau, tailored to the specific needs of end users.',
                             },
                             {
                                 title: 'Software Developer (young professional)',
-                                date: 'Swisscom (Schweiz) AG — Aug 2022 to Oct 2023',
-                                description: 'fdgvasf',
+                                start: '2022 - 2023',
+                                date: 'Swisscom (Schweiz) AG',
+                                description: 'As a Software Developer, I worked in a SAFe environment using Jira as a management tool. I contributed to the development and maintenance of various customer projects and features, both on the frontend (using Angular, React, Next.js) and the backend (primarily with Spring and REST APIs) using the programming languages Java and JavaScript/TypeScript. I also gained experience with relational and graph databases and consistently tested the new features I implemented.\n'
                             },
                             {
                                 title: 'BSc Digital Business & AI',
-                                date: 'BFH Bern — Sep 2022 to TODAY',
-                                description: 'fdgvasf',
+                                start: '2022 - [TODAY]',
+                                date: 'BFH Bern',
+                                description: 'During my time within the bachelors degree programm I already learnt thing in the areas of informatics, economics, communication and project management and much more.',
                             },
                             {
                                 title: 'Leader for Teams - Scrum Master',
-                                date: 'Swisscom (Schweiz) AG — Dez 2023 to TODAY',
-                                description: 'fdgvasf',
+                                start: '2022 - [TODAY]',
+                                date: 'Swisscom (Schweiz) AG',
+                                description: 'As a Scrum Master, I facilitate Scrum ceremonies, nurture teamwork, embed an agile mindset, remove impediments where needed, support and refine processes, foster a strong feedback culture, ensure continuous learning, and oversee access management for international team and its suppliers. My goal is to cultivate a self-organized, transparent, and productive work environment',
                             },
-
                         ].map((item, index) => (
-                            <div
+                          <div
                                 key={index}
                                 className={`${style.timelineItem} ${
                                     index === activeIndex ? style.active : ''
                                 }`}
                             >
-                                <div className={style.timelineMarker}></div>
-                                <div className={style.timelineContent}>
-                                    <h2>{item.title}</h2>
-                                    <p>{item.date}</p>
-                                    <p>{item.description}</p>
-                                </div>
-                            </div>
+                                <div className={style.timelineMarker}><p className={style.dates}>{item.start}</p></div>
+                              <div className={style.timelineContent}>
+                                  <h2>{item.title}</h2>
+                                  <p>{item.date}</p>
+                                  <button className={style.button} onClick={handleToggle}>
+                                      {showMore ? <p className={style.descriptionContent}>{item.description}</p> : <p className={style.buttonContent}>show more</p>}
+                                  </button>
+                              </div>
+                          </div>
                         ))}
                     </div>
                 </div>
