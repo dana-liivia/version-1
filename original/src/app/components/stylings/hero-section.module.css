@@ -28,6 +28,14 @@
     padding: 1rem;
 }
 
+.button {
+    transition: transform 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.25);
+}
+
 @keyframes typing {
     from {
         width: 0

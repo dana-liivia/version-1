@@ -26,11 +26,11 @@ export default function HeroSection() {
                     I’d love to hear from you.
                 </p>
                 <div className={"flex-row flex text-2xl justify-center"}>
-                    <a href="https://gitlab.ti.bfh.ch/feuzd1" target="_blank"
+                    <a className={style.button} href="https://gitlab.ti.bfh.ch/feuzd1" target="_blank"
                        rel="noopener noreferrer"><SiGitlab className={"m-3 mt-10"}/></a>
-                    <a href="https://github.com/dana-liivia" target="_blank" rel="noopener noreferrer"><SiGithub
+                    <a className={style.button}  href="https://github.com/dana-liivia" target="_blank" rel="noopener noreferrer"><SiGithub
                         className={"m-3 mt-10"}/></a>
-                    <a href="https://www.linkedin.com/in/dana-livia-feuz/" target="_blank"
+                    <a className={style.button}  href="https://www.linkedin.com/in/dana-livia-feuz/" target="_blank"
                        rel="noopener noreferrer"><SiLinkedin className={"m-3 mt-10"}/></a>
                 </div>
             </div>

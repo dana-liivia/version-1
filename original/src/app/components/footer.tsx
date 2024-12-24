@@ -11,11 +11,11 @@ export default function Footer() {
                         href="mailto:feuzd1@bfh.ch">feuzd1@bfh.ch</a></span></p>
                     <div className={"m-2 text-slate-950 text-3xl"}>
                         <div className={style.logoContainer}>
-                            <a href="https://gitlab.ti.bfh.ch/feuzd1" target="_blank"
+                            <a className={style.button} href="https://gitlab.ti.bfh.ch/feuzd1" target="_blank"
                                rel="noopener noreferrer"><SiGitlab className={"m-3 mt-10"}/></a>
-                            <a href="https://github.com/dana-liivia" target="_blank" rel="noopener noreferrer"><SiGithub
+                            <a className={style.button} href="https://github.com/dana-liivia" target="_blank" rel="noopener noreferrer"><SiGithub
                                 className={"m-3 mt-10"}/></a>
-                            <a href="https://www.linkedin.com/in/dana-livia-feuz/" target="_blank"
+                            <a className={style.button} href="https://www.linkedin.com/in/dana-livia-feuz/" target="_blank"
                                rel="noopener noreferrer"><SiLinkedin className={"m-3 mt-10"}/></a>
                         </div>
                     </div>

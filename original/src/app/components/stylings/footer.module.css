@@ -28,6 +28,15 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+
+    .button {
+        transition: transform 0.3s ease;
+    }
+
+    .button:hover {
+        transform: scale(1.25);
+    }
+
 }
 
 /* no need for further adaptions in responsiveness */
