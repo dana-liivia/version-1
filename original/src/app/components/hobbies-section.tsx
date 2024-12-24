@@ -61,10 +61,8 @@ export default function HobbiesSection() {
     // Facts API-Request
     useEffect(() => {
         async function fetchFact() {
-            const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY; // Replace with your own API key
-
             try {
-                const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY ?? ""; // Default to an empty string if undefined
+                const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY ?? "";// Default to an empty string if undefined
 
                 if (!apiKey) {
                     console.error("API key is missing!");
@@ -92,8 +90,6 @@ export default function HobbiesSection() {
     // Jokes API-Request
     useEffect(() => {
         async function fetchJoke() {
-            const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY; // Replace with your own API key
-
             try {
                 const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY ?? ""; // Default to an empty string if undefined
 
@@ -123,10 +119,8 @@ export default function HobbiesSection() {
     // Quotes API-Request
     useEffect(() => {
         async function fetchQuote() {
-            const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY; // Replace with your own API key
-
             try {
-                const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY ?? ""; // Default to an empty string if undefined
+                const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY ?? "";// Default to an empty string if undefined
 
                 if (!apiKey) {
                     console.error("API key is missing!");
