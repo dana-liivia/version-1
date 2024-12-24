@@ -3,10 +3,10 @@ import style from "@/app/components/stylings/hobbies-section.module.css";
 import {useEffect, useState} from "react";
 
 export default function HobbiesSection() {
-    const [nasaData, setNasaData] = useState(null);
-    const [weatherDataBern, setWeatherDataBern] = useState(null); // Added state for weather data
-    const [weatherDataZurich, setWeatherDataZurich] = useState(null); // Added state for weather data
-    const [weatherDataHonolulu, setWeatherDataHonolulu] = useState(null); // Added state for weather data
+    const [nasaData, setNasaData] = useState<any | null>(null);
+    const [weatherDataBern, setWeatherDataBern] = useState<any | null>(null); // Added state for weather data
+    const [weatherDataZurich, setWeatherDataZurich] = useState<any | null>(null); // Added state for weather data
+    const [weatherDataHonolulu, setWeatherDataHonolulu] = useState<any | null>(null); // Added state for weather data
     const [fact, setFact] = useState('');
     const [joke, setJoke] = useState('');
     const [quote, setQuote] = useState('');
@@ -16,7 +16,6 @@ export default function HobbiesSection() {
     useEffect(() => {
         async function fetchNASAImage() {
             const apiKey = process.env.NEXT_PUBLIC_NASA_API_KEY;
-            console.log("Api", apiKey)// Ersetze durch deinen eigenen API-Schlüssel
             try {
                 const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`);
                 const data = await response.json();
@@ -53,10 +52,8 @@ export default function HobbiesSection() {
                 console.error('Error fetching weather data:', error);
             }
         }
-
         fetchWeather();
     }, []);
-
 
     // Facts API-Request
     useEffect(() => {
@@ -77,7 +74,7 @@ export default function HobbiesSection() {
                 });
 
                 if (!response.ok) throw new Error('Failed to fetch fact');
-                const data: { fact: string } = await response.json();
+                const data: { fact: string }[] = await response.json();
                 setFact(data[0].fact);
             } catch (error) {
                 console.error('Error fetching facts:', error);
@@ -106,7 +103,7 @@ export default function HobbiesSection() {
                 });
 
                 if (!response.ok) throw new Error('Failed to fetch joke');
-                const data: { joke: string } = await response.json();
+                const data: { joke: any }[] = await response.json();
                 setJoke(data[0].joke);
             } catch (error) {
                 console.error('Error fetching facts:', error);
@@ -135,7 +132,7 @@ export default function HobbiesSection() {
                 });
 
                 if (!response.ok) throw new Error('Failed to fetch quote');
-                const data: { quote: string } = await response.json();
+                const data: { quote: any, author: any }[] = await response.json();
                 setQuote(data[0].quote);
                 setAuthor(data[0].author);
             } catch (error) {
