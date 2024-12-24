@@ -19,7 +19,7 @@ export default function Footer() {
                                rel="noopener noreferrer"><SiLinkedin className={"m-3 mt-10"}/></a>
                         </div>
                     </div>
-                    <p>"Creating with passion and purpose."</p>
+                    <p>Creating with passion and purpose.</p>
                 </div>
             </footer>
         </div>

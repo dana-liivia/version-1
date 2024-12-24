@@ -7,7 +7,11 @@ export default function Header() {
     const [isDisplayed, setIsDisplayed] = useState(true);
 
     useEffect(() => {
-        window.innerWidth < 769 ? setIsDisplayed(false) : setIsDisplayed(true);
+        if (window.innerWidth < 769) {
+            setIsDisplayed(false);
+        } else {
+            setIsDisplayed(true);
+        }
     }, []);
 
     useEffect(() => {

@@ -2,10 +2,6 @@
 import style from "@/app/components/stylings/hobbies-section.module.css";
 import {useEffect, useState} from "react";
 
-interface FactResponse {
-    fact: string;
-}
-
 export default function HobbiesSection() {
     const [nasaData, setNasaData] = useState(null);
     const [weatherDataBern, setWeatherDataBern] = useState(null); // Added state for weather data
