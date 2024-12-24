@@ -29,12 +29,11 @@
 
 .contentContainer {
     display: flex;
-    flex-direction: column;
     width: 76vw;
     background-color: #221d1b8a;
     padding: 1rem;
     margin: 0 1rem 1rem 0;
-
+    flex-direction: column;
 }
 
 .weatherContainer {
@@ -107,7 +106,7 @@
     }
 
     .contentContainer {
-        min-width: 80vw;
+        width: 85vw;
         padding: 0.5rem;
         margin: 0 0.5rem 1rem 0.5rem;
         display: flex;
@@ -116,7 +115,7 @@
     }
 
     .weatherContainer {
-        min-width: 30vw;
+        width: 85vw;
         padding: 0.5rem;
         margin: 0 0.5rem 1rem 0.5rem;
         justify-content: center;
@@ -125,7 +124,7 @@
     }
 
     .cContainer {
-        min-width: 93vw;
+        width: 85vw;
         padding: 1rem;
         margin: 0 0.5rem 1rem 0.5rem;
         display: flex;
@@ -191,7 +190,7 @@
     }
 
     .contentContainer {
-        min-width: 80vw;
+        min-width: 85vw;
         padding: 0.5rem;
         margin: 0 0.5rem 1rem 0.5rem;
         display: flex;
@@ -200,7 +199,7 @@
     }
 
     .weatherContainer {
-        min-width: 30vw;
+        width: 85vw;
         padding: 0.5rem;
         margin: 0 0.5rem 1rem 0.5rem;
         justify-content: center;
@@ -209,7 +208,7 @@
     }
 
     .cContainer {
-        min-width: 93vw;
+        width: 85vw;
         padding: 1rem;
         margin: 0 0.5rem 1rem 0.5rem;
         display: flex;
