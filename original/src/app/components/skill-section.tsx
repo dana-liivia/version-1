@@ -137,7 +137,7 @@ export default function SkillSection() {
                 <h2 className={style.description}>I have a diverse set of skills and enjoy working with various tools to
                     bring projects to life in a creative and efficient way.</h2>
                 <h2 className={style.title}>Skills Know-How</h2>
-                <div className={style.rows}>
+                <div className={style.row1}>
                     {skillStack.map((s, i) => (
                         <div key={i} className={"m-9"}>
                             {s.icon}
@@ -145,7 +145,7 @@ export default function SkillSection() {
                     ))}
                 </div>
                 <h2 className={style.title}>Tools Know-How</h2>
-                <div className={style.rows}>
+                <div className={style.row2}>
                     {techStack.map((s, i) => (
                         <div key={i} className={"m-9"}>
                             {s.icon}
