@@ -108,7 +108,6 @@ export default function HobbiesSection() {
                 console.error('Error fetching facts:', error);
             }
         }
-
         fetchJoke();
     }, []);
 
@@ -150,7 +149,7 @@ export default function HobbiesSection() {
     return (
         <div className={style.backgroundFull}>
             <div className={style.container}>
-                <h2 className={style.timelineTitle}>nice things to know</h2>
+                <h2 className={style.timelineTitle}>things to know</h2>
                 <div className={style.rowContainer}>
                     <div className={style.contentContainer}>
                         <h2 className={style.title}>Nasa: Picture of the day - {nasaData.title}</h2>

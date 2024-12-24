@@ -1,3 +1,27 @@
+
+.timelineTitle {
+    color: black;
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 3rem  0;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 14ch;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
 .backgroundFull {
     background-image: url("../../../assets/img/background-person.png");
     background-repeat: no-repeat;
@@ -14,18 +38,9 @@
     flex-direction: column;
     color: white;
 }
-
-.timelineTitle {
-    text-align: center;
-    color: rgba(0, 0, 0);
-    font-weight: bolder;
-    font-size: 24px;
-    margin-bottom: 3rem;
-}
-
-.title {
-    font-weight: bolder;
-}
+ .title {
+     font-weight: bolder;
+ }
 
 .contentContainer {
     display: flex;
@@ -80,12 +95,7 @@
 
 /* Responsive Design für Laptops oder Ähnliches */
 @media (max-width: 1497px) {
-    .timelineTitle {
-        text-align: center;
-        color: black;
-        font-size: 24px;
-        margin-bottom: 3rem;
-    }
+
 
     .backgroundFull {
         background-image: url("../../../assets/img/background-person.png");
@@ -98,7 +108,6 @@
     .container {
         background-color: rgba(255, 255, 255, 0.28);
         min-height: 110vh;
-        min-width: 100vw;
         display: flex;
         padding: 5% 5% 0 5%;
         flex-direction: column;
@@ -170,12 +179,7 @@
 
 /* Responsive Design */
 @media (max-width: 820px) {
-    .timelineTitle {
-        text-align: center;
-        color: black;
-        font-size: 18px;
-        margin-bottom: 3rem;
-    }
+
 
     .rowContainer {
         display: flex;

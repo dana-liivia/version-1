@@ -29,7 +29,9 @@ export default function ExperiencesSection() {
         <div className={style.container}>
             <div className={style.background}>
                 <div className={style.timelineContainer}>
+                    <div className={style.titleContainer}>
                     <h2 className={style.timelineTitle}>my professional and educational experiences</h2>
+                    </div>
                     <div className={style.timeline}>
                         {/** Timeline Items */}
                         {[

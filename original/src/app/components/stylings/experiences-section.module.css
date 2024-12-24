@@ -18,12 +18,35 @@
     max-width: 80vw;
 }
 
-.timelineTitle {
+.titleContainer {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    display: flex;
+}
+
+.timelineTitle {
     color: white;
     font-size: 24px;
     font-weight: bolder;
-    margin: 5rem 0 3rem 0;
+    margin: 6rem 0;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 43ch;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
 }
 
 .timeline {

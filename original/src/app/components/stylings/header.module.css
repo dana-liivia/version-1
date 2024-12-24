@@ -8,6 +8,7 @@
     flex-direction: row;
     justify-content: left;
     align-items: center;
+    z-index: 1000;
 
     .img {
         max-height: 3rem;
@@ -16,7 +17,7 @@
 }
 
 .sectionName {
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     cursor: pointer; /* Indicate clickability */
 }
 
