@@ -1,5 +1,5 @@
 .backgroundFull {
-    background-image: url("../../../assets/img/person.png");
+    background-image: url("../../../assets/img/background-person.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: right;
@@ -78,7 +78,7 @@
     }
 
     .backgroundFull {
-        background-image: url("../../../assets/img/person.png");
+        background-image: url("../../../assets/img/background-person.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: right;
@@ -162,7 +162,7 @@
     }
 
     .backgroundFull {
-        background-image: url("../../../assets/img/person.png");
+        background-image: url("../../../assets/img/background-person.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: right;
