@@ -64,6 +64,13 @@ export default function HobbiesSection() {
             const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY; // Replace with your own API key
 
             try {
+                const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY ?? ""; // Default to an empty string if undefined
+
+                if (!apiKey) {
+                    console.error("API key is missing!");
+                    return;
+                }
+
                 const response = await fetch('https://api.api-ninjas.com/v1/facts', {
                     method: 'GET',
                     headers: {
@@ -88,6 +95,13 @@ export default function HobbiesSection() {
             const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY; // Replace with your own API key
 
             try {
+                const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY ?? ""; // Default to an empty string if undefined
+
+                if (!apiKey) {
+                    console.error("API key is missing!");
+                    return;
+                }
+
                 const response = await fetch('https://api.api-ninjas.com/v1/jokes', {
                     method: 'GET',
                     headers: {
@@ -112,6 +126,13 @@ export default function HobbiesSection() {
             const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY; // Replace with your own API key
 
             try {
+                const apiKey = process.env.NEXT_PUBLIC_FACTS_API_KEY ?? ""; // Default to an empty string if undefined
+
+                if (!apiKey) {
+                    console.error("API key is missing!");
+                    return;
+                }
+
                 const response = await fetch('https://api.api-ninjas.com/v1/quotes', {
                     method: 'GET',
                     headers: {
